@@ -167,7 +167,11 @@ public final class KeyboardRow {
         return Math.max(keyXPos + keyboardRightEdge, mCurrentX);
     }
 
+    
     public float getKeyWidth(final TypedArray keyAttr, final float keyXPos) {
+        return _getKeyWidth(keyAttr,keyXPos)-4;
+    }
+    public float _getKeyWidth(final TypedArray keyAttr, final float keyXPos) {
         if (keyAttr == null) {
             return getDefaultKeyWidth();
         }
